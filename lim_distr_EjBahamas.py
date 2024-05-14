@@ -6,7 +6,6 @@ P = np.array([
     [3/8, 1/8, 1/2],
     [1/2, 1/2, 0.0]
 ])
-
 def lim_distr(P):
     n = P.shape[0]
     A = P.T - np.eye(n)
@@ -15,7 +14,6 @@ def lim_distr(P):
     b[-1] = 1
     p = solve(A, b)
     return p
-
 p_equilibrio = lim_distr(P)
 
 print("Transition matrix P:\n", P)
